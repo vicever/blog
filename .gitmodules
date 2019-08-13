@@ -4,3 +4,7 @@
 [submodule "themes/stip"]
 	path = themes/stip
 	url = https://github.com/EmielH/stip-hugo.git
+[submodule "public"]
+	path = public
+	url = https://github.com/vicever/vicever.github.io.git
+	branch = master
