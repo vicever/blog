@@ -8,3 +8,6 @@
 	path = public
 	url = https://github.com/vicever/vicever.github.io.git
 	branch = master
+[submodule "themes/hermit"]
+	path = themes/hermit
+	url = https://github.com/Track3/hermit.git
