@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on 胜算有吾</title>
+    <link>https://www.zhanggs.com/blog/</link>
+    <description>Recent content in Blogs on 胜算有吾</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 14 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.zhanggs.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>站点搭建手册</title>
+      <link>https://www.zhanggs.com/blog/hugo-blog-setup/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.zhanggs.com/blog/hugo-blog-setup/</guid>
+      <description>如何用 HUGO 搭建个人站点，并挂载到 github pages 上 会用到的资源链接：
+HUGO
+Themes:Hugo Future Imperfect Slim
+github pags
+Step 1. 安装 hugo 在 mac 上，安装 hugo 很方便，直接用 Homebrew 就可以了。没有的自行搜索操作步骤。
+$brew install hugo  验证下安装是否成功
+$hugo version Hugo Static Site Generator v0.56.3/extended darwin/amd64 BuildDate: unknown  Step 2. 新建一个站点 来到自己的项目目录下，新建一个 hugo 的站点
+不需要自行新建目录，new site 的时候会新增一个目录
+$hugo new site myblog Congratulations! Your new Hugo site is created in /Users/Document/myblog. Just a few more steps and you&#39;re ready to go: 1.</description>
+    </item>
+    
+  </channel>
+</rss>

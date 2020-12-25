@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c">
+<meta itemprop="name" content="站点搭建手册">
+<meta itemprop="description" content="用 HUGO 搭建一个 github.io 的站点 ">
+
+
+<meta itemprop="datePublished" content="2019-08-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-08-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="507">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta property="og:title" content="站点搭建手册" />
+<meta property="og:description" content="用 HUGO 搭建一个 github.io 的站点 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.zhanggs.com/blog/hugo-blog-setup/" />
+<meta property="article:published_time" content="2019-08-14T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-08-14T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="站点搭建手册"/>
+<meta name="twitter:description" content="用 HUGO 搭建一个 github.io 的站点 "/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>站点搭建手册</title>
+	<link rel="stylesheet" href="https://www.zhanggs.com/css/style.min.1151a9b84b5f7f69c0e314b56b4781e100b1dfb1330f2c2c317f665fb59d9fbc.css" integrity="sha256-EVGpuEtff2nA4xS1a0eB4QCx37EzDywsMX9mX7Wdn7w=" crossorigin="anonymous">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://www.zhanggs.com">胜算有吾</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="https://www.zhanggs.com/blog/">文章</a>
+				<a href="https://www.zhanggs.com/tags/">标签</a>
+				<a href="https://www.zhanggs.com/about/">关于</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/vicever" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://www.zhanggs.com/blog/">文章</a></li>
+			<li><a href="https://www.zhanggs.com/tags/">标签</a></li>
+			<li><a href="https://www.zhanggs.com/about/">关于</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner thin animated fadeIn faster">
+		<h1>站点搭建手册</h1>
+		<div class="content">
+			
+
+<hr />
+
+<h3 id="如何用-hugo-搭建个人站点-并挂载到-github-pages-上">如何用 HUGO 搭建个人站点，并挂载到 github pages 上<a href="#如何用-hugo-搭建个人站点-并挂载到-github-pages-上" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+
+<p>会用到的资源链接：<br />
+ <a href="https://gohugo.io">HUGO</a><br />
+ <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Themes:Hugo Future Imperfect Slim</a><br />
+ <a href="https://pages.github.com/">github pags</a></p>
+
+<h2 id="step-1-安装-hugo">Step 1. 安装 hugo<a href="#step-1-安装-hugo" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>在 mac 上，安装 hugo 很方便，直接用 Homebrew 就可以了。没有的自行搜索操作步骤。</p>
+
+<pre><code>$brew install hugo
+</code></pre>
+
+<p>验证下安装是否成功</p>
+
+<pre><code>$hugo version
+Hugo Static Site Generator v0.56.3/extended darwin/amd64 BuildDate: unknown
+</code></pre>
+
+<h2 id="step-2-新建一个站点">Step 2. 新建一个站点<a href="#step-2-新建一个站点" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>来到自己的项目目录下，新建一个 hugo 的站点<br />
+不需要自行新建目录，new site 的时候会新增一个目录</p>
+
+<pre><code>$hugo new site myblog  
+Congratulations! Your new Hugo site is created in /Users/Document/myblog.
+
+Just a few more steps and you're ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/ or
+   create your own with the &quot;hugo new theme &lt;THEMENAME&gt;&quot; command.
+2. Perhaps you want to add some content. You can add single files
+   with &quot;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&quot;.
+3. Start the built-in live server via &quot;hugo server&quot;.
+
+</code></pre>
+
+<p>可以试试能不能跑起来</p>
+
+<pre><code>$hugo server
+
+Building sites … WARN 2019/08/14 16:05:48 found no layout file for &quot;HTML&quot; for &quot;home&quot;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2019/08/14 16:05:48 found no layout file for &quot;HTML&quot; for &quot;taxonomyTerm&quot;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+WARN 2019/08/14 16:05:48 found no layout file for &quot;HTML&quot; for &quot;taxonomyTerm&quot;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+                   | EN
++------------------+----+
+  Pages            |  3
+  Paginator pages  |  0
+  Non-page files   |  0
+  Static files     |  0
+  Processed images |  0
+  Aliases          |  0
+  Sitemaps         |  1
+  Cleaned          |  0
+
+Total in 7 ms
+Watching for changes in /Users/zhangguangsheng/Documents/sourcecode/tmp/temp/{archetypes,content,data,layouts,static}
+Watching for config changes in /Users/zhangguangsheng/Documents/sourcecode/tmp/temp/config.toml
+Environment: &quot;development&quot;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Press Ctrl+C to stop
+</code></pre>
+
+<p>打开连接看看 <a href="http://localhost:1313/">http://localhost:1313/</a></p>
+
+<p>hugo就这点不好，它的默认配置是啥也没有的，只有个简单的空页面，都需要自行配置的。看到个大白页面也不用着急，正常现象。</p>
+
+<h2 id="step-3-加载一个主题">Step 3. 加载一个主题<a href="#step-3-加载一个主题" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>不能就这么大白板放着啊，加个主题吧！<br />
+可以去它的主题站点去找一个<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>，还是有不少能看的。我看上了<a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a>
+下载到本地先</p>
+
+<pre><code>$mkdir themes // Creates a Themes Folder
+$cd themes		 // Points to the Themes Folder
+$git clone https://github.com/pacollins/hugo-future-imperfect-slim.git
+</code></pre>
+
+<p>这个时候如果直接去 <code>hugo server</code>一下，你会发现页面乱套了，淡定！！！<br />
+现在需要把配置文件给配上，如果简单点的话，直接上 copy 大法，把 主题下examplesite 的内容都复制到站点目录里面。</p>
+
+<pre><code>$cp -R themes/hugo-future-imperfect-slim/exampleSite/ ./
+$hugo server
+</code></pre>
+
+<p>这下在看下 <a href="http://localhost:1313/">http://localhost:1313/</a>， 干得漂亮。</p>
+
+<p>然后就需要根据自己的需要，改 config.toml 的内容。以及 content 里面的文章内容（都删了，一会儿自己写）</p>
+
+<h2 id="step-4-提交到-github-io上">Step 4. 提交到 github.io上<a href="#step-4-提交到-github-io上" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>需要在 github 上建立两个项目，一个用来放这个站点的源代码，包括各种配置、主题、资源等，就是 hugo 建的这个。还有一个项目是github pages 的项目，这个就是站点的静态资源信息。
+如何建个普通项目就不说了，到处都是，找一个就行。特别注意建立的 github pages 的项目，项目名称必须是&lt;用户名&gt;.github.io，项目地址是：<a href="https://github.com/">https://github.com/</a>&lt;用户名&gt;/&lt;用户名&gt;.github.io，而后就能通过 http://&lt;用户名&gt;.github.io 的地址来访问。</p>
+
+<h4 id="提交项目源码">提交项目源码<a href="#提交项目源码" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<p>举例：项目源代码的项目目录为 myblog，github用户名为 hugo</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$cd</span> myblog
+<span class="nv">$git</span> init
+<span class="nv">$git</span> add .
+<span class="nv">$git</span> remote add origin https://github.com/hugo/myblog.git
+<span class="nv">$git</span> commit -m<span class="s2">&#34;xxxxx&#34;</span>
+<span class="nv">$git</span> push origin master</code></pre></div>
+<p>现在到<a href="https://github.com/hugo/myblog">https://github.com/hugo/myblog</a> 看看代码提交情况。</p>
+
+<h4 id="提交-pages-站点代码">提交 pages 站点代码<a href="#提交-pages-站点代码" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<p>public 目录里面保存的都是最终站点需要展示的静态文件。之前一顿折腾总是留下些乱七八糟的东西，斩断重来吧！！</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$rm</span> -rf public
+<span class="nv">$git</span> submodule add -b master https://github.com/hugo/hugo.github.io.git public</code></pre></div>
+<p>然后就要提交内容了，鉴于每次提交一下流程都要操作一次，所以可以写成脚本。<br />
+新建一个<code>deploy.sh</code>的文件，并把它设为可执行<code>$chmod +x deploy.sh</code>。然后我们编辑这个文件成下面这样。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="c1"># If a command fails then the deploy stops</span>
+<span class="nb">set</span> -e
+
+<span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+
+<span class="c1"># Build the project.</span>
+hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+
+<span class="c1"># Add changes to git.</span>
+git add .
+
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+
+<span class="c1"># Push source and build repos.</span>
+git push origin master</code></pre></div>
+<p>然后就可以执行<code>./deploy.sh &quot;你的提交注释&quot;</code>，一顿操作猛如虎，然后等一会可以上<a href="https://hugo.github.io">https://hugo.github.io</a>看站点了。</p>
+
+<h2 id="step-5-绑定自己的域名">Step 5. 绑定自己的域名<a href="#step-5-绑定自己的域名" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>虽然 github.io 的站点和域名是免费的，但是不够个性，站点养不起，域名还是可以买一个的。怎么买就不在这里介绍了。
+现在假如你已经有了自己的域名hugo.io，需要做两件事：</p>
+
+<h4 id="1-让这个域名指向-github-io">1. 让这个域名指向 github.io<a href="#1-让这个域名指向-github-io" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<p>具体操作可以看 github 的<a href="https://help.github.com/cn/articles/quick-start-setting-up-a-custom-domain">官方说明</a></p>
+
+<h4 id="2-让这个站点知道自己叫这个并响应">2. 让这个站点知道自己叫这个并响应<a href="#2-让这个站点知道自己叫这个并响应" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h4>
+
+<p>在<code>public</code>目录中新建一个文本文件，取名为<code>CNAME</code>，这个文件的内容就一个，你的域名，比如<code>hugo.io</code>。完全按照这个格式来，别的都不用。
+有了这个站点就知道原来自己就是<code>hugo.io</code>了。</p>
+
+<h2 id="step-6-写一个文章并发布试试">Step 6. 写一个文章并发布试试<a href="#step-6-写一个文章并发布试试" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+
+<p>为了保证格式的有效性，最好以现有的内容为模板进行修改，包括很多的配置要求，都沿用 examplesite 里面的内容。</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">$hugo</span> new blog/my-first-blog.md</code></pre></div>
+<p>然后用文本编辑工具编辑这个 md 文件就行了，它是遵循的 markdown 的文件格式。</p>
+
+<p>完成编辑之后，运行发布脚本<code>./deploy.sh</code></p>
+
+<p><strong>ENJOY IT</strong></p>
+
+		</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2020 <a href="https://www.zhanggs.com">胜算</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://www.zhanggs.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="https://www.zhanggs.com/js/bundle.min.4a9a0ac3d2217822c7865b4161e6c2a71de1d70492264337755427898dd718f6.js" integrity="sha256-SpoKw9IheCLHhltBYebCpx3h1wSSJkM3dVQniY3XGPY=" crossorigin="anonymous"></script>
+	
+
+</body>
+
+</html>
